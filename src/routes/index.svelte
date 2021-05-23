@@ -12,25 +12,22 @@
     }
 </script>
 
+<svelte:head>
+    <title>Murat Taştan - Creative Director @Bucephalus</title>
+    <meta name="description" content="Grafik Tasarımcısı Murat Taştan'ın kişisel web sitesi">
+</svelte:head>
 
-{#if ivisible}
-        <div in:fly="{{ y: -200, duration: 2000 }}" out:fly="{{ y: -200, duration: 2000 }}" class="h-3/4 w-2/3 border-t-8 bg-white p-4 border-b-8 border-pink-700 absolute right-0 top-0 shadow-lg">
-            <img src="/cok-uluslu.jpg" alt="Çok Uluslu Firmalar" class="h-5/6 mx-auto">
-            <p class="font-semibold text-xl text-right pr-6">ÇOK ULUSLU ŞİRKETLER</p>
-            <button on:click="{intl}" class="bg-pink-700 text-white inline-block fixed "><svg xmlns="http://www.w3.org/2000/svg" class="inline h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg></button>
-        </div>
-{/if}
 <main class="flex md:flex-row flex-wrap justify-center items-center mx-auto h-screen border-t-8  border-b-8 border-pink-700">
     <div class="flex flex-col w-full md:w-1/4 bg-gray-900 h-full space-between items-center  ">
         <img src="/murat-tastan-1.jpg" alt="Murat Taştan">
         <h1 class="text-red-500 text-2xl md:text-3xl tracking-widest  pt-10">MURAT TAŞTAN</h1> 
         <p class="text-white text-md md:text-lg tracking-widest">CREATIVE DIRECTOR</p>
         <p class="text-white text-md md:text-lg tracking-widest">MARKA DANIŞMANI</p>
-        <p class="text-white text-md md:text-lg tracking-widest"><a href="https://www.bucephalus.com.tr">@BUCEPHALUS</a></p>
+        <p class="text-white text-md md:text-lg tracking-widest"><a href="https://www.bucephalus.com.tr">@BUCEPHALUS <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+          </svg></a></p>
 
-        <div class="text-white text-left text-xs py-5 md:pt-10">
+        <div class="text-white text-left text-xs py-5 md:pt-6">
             <p><svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-4 w-4 inline text-pink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>MURAT@MURATTASTAN.COM</p>
@@ -43,6 +40,10 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>ACIBADEM / KADIKÖY</p>
+        </div>
+
+        <div class="text-white">
+            <p><a href="https://www.linkedin.com/in/murat-tastan-55a26038/" target="_blank" rel="nofollow">Linkedin</a> <span class="text-pink-700">|</span> <a href="https://www.instagram.com/dejavumn/" target="_blank" rel="nofollow">Instagram</a></p>
         </div>
     </div>
     <div class="w-full md:w-1/3 p-6">
@@ -61,7 +62,8 @@
           </svg></button>
         </p>
           {#if nvisible}
-          <div in:fly="{{ y: -200, duration: 2000 }}" out:fly="{{ y: -200, duration: 2000 }}" class="flex flex-col content-start h-full md:h-3/4 md:w-2/3 md:border-t-8 bg-white p-4 border-b-8 border-pink-700 absolute md:right-0 md:top-0 shadow-lg">
+          <img src="/ulusal.jpg" alt="Ulusal Firmalar" class="sm:hidden h-auto mx-auto">
+          <div in:fly="{{ y: -200, duration: 2000 }}" out:fly="{{ y: -200, duration: 2000 }}" class="hidden sm:block h-3/4 w-2/3 border-t-8 bg-white p-4 border-b-8 border-pink-700 absolute right-0 top-0 shadow-lg">
               <img src="/ulusal.jpg" alt="Ulusal Firmalar" class="h-auto mx-auto">
               <p class="font-semibold text-xl text-right pr-6">ULUSAL ŞİRKETLER</p>
               <button on:click="{nationwide}" class="bg-pink-700 text-white inline-block "><svg xmlns="http://www.w3.org/2000/svg" class="inline h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,6 +74,17 @@
         <p><button on:click="{intl}">Çok Uluslu Şirketler<svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
           </svg></button></p>
+
+          {#if ivisible}
+          <img src="/cok-uluslu.jpg" alt="Çok Uluslu Firmalar" class="sm:hidden h-auto mx-auto">
+        <div in:fly="{{ y: -200, duration: 2000 }}" out:fly="{{ y: -200, duration: 2000 }}" class="hidden sm:block h-3/4 w-2/3 border-t-8 bg-white p-4 border-b-8 border-pink-700 absolute right-0 top-0 shadow-lg">
+            <img src="/cok-uluslu.jpg" alt="Çok Uluslu Firmalar" class="h-5/6 mx-auto">
+            <p class="font-semibold text-xl text-right pr-6">ÇOK ULUSLU ŞİRKETLER</p>
+            <button on:click="{intl}" class="bg-pink-700 text-white inline-block fixed "><svg xmlns="http://www.w3.org/2000/svg" class="inline h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg></button>
+        </div>
+{/if}
     </div>
     <div class="w-full md:w-1/3 border-pink-700 border-b-8 md:border-b-0 md:border-l p-6">
         <p class="text-red-500 font-bold mt-6">1997 - 1999</p>
